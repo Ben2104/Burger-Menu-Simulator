@@ -1,8 +1,4 @@
 class Burger:
-    price = 0.0
-    name = ""
-    amount = 0
-    
     def __init__(self, newName, newPrice):
         self.price = newPrice
         self.name = newName
