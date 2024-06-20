@@ -1,9 +1,9 @@
 class Burger:
-    price = 0
+    price = 0.0
     name = ""
     amount = 0
     
-    def __init__(self, newPrice, newName):
+    def __init__(self, newName, newPrice):
         self.price = newPrice
         self.name = newName
         
@@ -17,7 +17,7 @@ class Burger:
         return self.amount
 
     def getPrice(self):
-        return self.price * self.amount
+        return self.price
     
     def getName(self):
         return self.name

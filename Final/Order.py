@@ -11,11 +11,11 @@ class Order:
         self.donCali = Burger("Don Cali Burger", 5.95)
         
         self._priceDict = {
-                1: (self.deAnza.getName(), self.deAnza.getPrice()),
-                2: (self.baconCheese.getName(), self.baconCheese.getPrice()),
-                3: (self.mushroomSwiss.getName(), self.mushroomSwiss.getPrice()),
-                4: (self.western.getName(), self.western.getPrice()),
-                5: (self.donCali.getName(), self.donCali.getPrice())
+                1: (self.deAnza.getName(), float(self.deAnza.getPrice())),
+                2: (self.baconCheese.getName(), float(self.baconCheese.getPrice())),
+                3: (self.mushroomSwiss.getName(), float(self.mushroomSwiss.getPrice())),
+                4: (self.western.getName(), float(self.western.getPrice())),
+                5: (self.donCali.getName(), float(self.donCali.getPrice()))
         }
     
     def displayMenu(self):
