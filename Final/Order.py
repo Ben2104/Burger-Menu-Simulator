@@ -71,6 +71,7 @@ class Order:
     def saveToFile(self, bill):
         timeStamp = time.time()
         orderTimeStamp = datetime.datetime.fromtimestamp(timeStamp).strftime('%Y-%m-%d %H-%M-%S')
+        orderTimeStamp = orderTimeStamp + ".txt"
         with open(orderTimeStamp, 'w') as outFile:
             outFile.write(bill)
             
