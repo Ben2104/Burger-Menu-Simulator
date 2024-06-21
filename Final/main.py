@@ -1,9 +1,14 @@
 from Order import *
 from Burger import *
+from Student import *
+from Staff import * 
 def main():
     o = Order()
-    currentOrder = o.getOrder()
-    currentPrice = o.calculatePrice(currentOrder)
-    o.display_bill(currentOrder, currentPrice)
-    
+    o.displayMenu()
+    curOrder = o.getOrder()
+    curPrice = o.calculatePrice(curOrder)
+    student = Student()
+    staff = Staff()
+
+    o.display_bill(curOrder, curPrice, staff)
 main()

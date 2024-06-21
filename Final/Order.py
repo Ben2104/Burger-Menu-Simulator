@@ -48,18 +48,8 @@ class Order:
         """Calculate the total price of the order."""
         total_price = sum(self._priceDict[item][1] * quantity for item, quantity in order.items())
         return total_price
-    
-    def applyTax(total_price, customer):
-        """Apply tax based on user type."""
-        if customer.isStudent():
-            return total_price
-        elif not customer.isStudent():
-            tax = total_price * 0.09
-            return total_price + tax
-        else:
-            return "Invalid user type."
         
-    def display_bill(self, order, total_price):
+    def display_bill(self, order, total_price, customer):
         """Display the bill including item details, total before tax, tax amount, and total price after tax."""
         print("Bill:")
         for item, quantity in order.items():
@@ -67,10 +57,6 @@ class Order:
             print(f"{item_name}: {quantity} x ${price:.2f} = ${price * quantity:.2f}")
             
         print(f"Total before tax: ${total_price:.2f}")
-        '''
-        if not customer.isStudent():
-            tax = total_price * 0.09
-            print(f"Tax amount: ${tax:.2f}")
-            total_price += tax
-        '''
-        print(f"Total price after tax: ${total_price:.2f}")
+        
+        print(f"Tax amount: ${customer.getTaxAmount(total_price):.2f}")
+        print(f"Total price after tax: ${customer.applyTax(total_price):.2f}")
