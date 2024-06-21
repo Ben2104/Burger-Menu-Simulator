@@ -10,7 +10,15 @@ if __name__=="__main__":
     curPrice = o.calculatePrice(curOrder)
     student = Student()
     staff = Staff()
-
-    bill = o.display_bill(curOrder, curPrice, staff)
+    
+    customer = Customer()
+    user_type = input("Are you a student or a staff? ").strip().lower()
+    
+    if (customer.isStudent(user_type)):
+        customer_type = Student()
+    else:
+        customer_type = Staff()
+    
+    bill = o.display_bill(curOrder, curPrice, customer_type)
     o.saveToFile(bill)
     print(bill)
