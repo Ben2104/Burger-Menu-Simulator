@@ -4,9 +4,6 @@ from Burger import *
 
 class Order:
     def __init__(self):
-        self._priceBtax = 0
-        self._priceAtax = 0
-        self._tax = 0.0825
         self.deAnza = Burger("De Anza Burger", 5.25)
         self.baconCheese = Burger("Bacon Cheese", 5.75)
         self.mushroomSwiss = Burger("Mushroom Swiss", 5.95)
