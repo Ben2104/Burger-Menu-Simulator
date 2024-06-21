@@ -1,8 +1,9 @@
+import datetime
 from Order import *
 from Burger import *
 from Student import *
 from Staff import * 
-def main():
+if __name__=="__main__":
     o = Order()
     o.displayMenu()
     curOrder = o.getOrder()
@@ -10,5 +11,6 @@ def main():
     student = Student()
     staff = Staff()
 
-    o.display_bill(curOrder, curPrice, staff)
-main()
+    bill = o.display_bill(curOrder, curPrice, staff)
+    o.saveToFile(bill)
+    print(bill)

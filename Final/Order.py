@@ -1,4 +1,7 @@
+import datetime
+import time
 from Burger import *
+
 class Order:
     def __init__(self):
         self._priceBtax = 0
@@ -28,10 +31,13 @@ class Order:
         """Get user's order and quantity."""
         order = {}
         while True:
-            choice = input("Enter the number of the item you want (or '6' to exit): ").strip()
+            choice = input("Enter the number of the item you want (or '6' to exit, '7' to clear): ").strip()
             if choice == '6':
                 return None
-            elif not choice.isdigit() or int(choice) not in range(1, 6):
+            elif choice == '7':
+                for key, val in order.items():
+                    order[key] = 0
+            elif not choice.isdigit() or int(choice) not in range(1, 7):
                 print("Invalid input. Please enter a number between 1 and 5.")
                 continue
             else:
@@ -39,7 +45,10 @@ class Order:
                 if not quantity.isdigit() or int(quantity) < 1:
                     print("Invalid quantity. Please enter a positive integer.")
                     continue
-                order[int(choice)] = int(quantity)
+                if int(choice) not in order:
+                    order[int(choice)] = int(quantity)
+                else:
+                    order[int(choice)] += int(quantity)
                 another = input("Do you want to order anything else? (yes/no): ").strip().lower()
                 if another != "yes":
                     return order
@@ -51,12 +60,20 @@ class Order:
         
     def display_bill(self, order, total_price, customer):
         """Display the bill including item details, total before tax, tax amount, and total price after tax."""
-        print("Bill:")
+        bill = "Bill:\n"
         for item, quantity in order.items():
             item_name, price = self._priceDict[item]
-            print(f"{item_name}: {quantity} x ${price:.2f} = ${price * quantity:.2f}")
+            bill += f"{item_name}: {quantity} x ${price:.2f} = ${price * quantity:.2f}\n"
             
-        print(f"Total before tax: ${total_price:.2f}")
+        bill += f"Total before tax: ${total_price:.2f}\n"
         
-        print(f"Tax amount: ${customer.getTaxAmount(total_price):.2f}")
-        print(f"Total price after tax: ${customer.applyTax(total_price):.2f}")
+        bill += f"Tax amount: ${customer.getTaxAmount(total_price):.2f}\n"
+        bill += f"Total price after tax: ${customer.applyTax(total_price):.2f}\n"
+        return bill
+    
+    def saveToFile(self, bill):
+        timeStamp = time.time()
+        orderTimeStamp = datetime.datetime.fromtimestamp(timeStamp).strftime('%Y-%m-%d %H-%M-%S')
+        with open(orderTimeStamp, 'w') as outFile:
+            outFile.write(bill)
+            

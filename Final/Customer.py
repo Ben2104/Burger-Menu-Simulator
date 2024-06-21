@@ -3,7 +3,7 @@ class Customer:
         return
     
     def getTaxAmount(self, amount):
-        return self.taxRate * amount
+        return NotImplemented
 
     def applyTax(self, amount):
-        return amount + (amount * self.taxRate)
+        raise NotImplemented

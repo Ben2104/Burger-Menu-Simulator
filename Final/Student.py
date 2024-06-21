@@ -5,6 +5,11 @@ class Student(Customer):
         super().__init__()
         self.taxRate = 0
     
+    def getTaxAmount(self, amount):
+        return (amount * self.taxRate)
+    def applyTax(self, amount):
+        return (amount) + (amount * self.taxRate)
+    
 
     
     
