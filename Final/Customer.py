@@ -3,10 +3,10 @@ class Customer:
         return
     
     def getTaxAmount(self, amount):
-        return NotImplemented
+        return self.taxRate * amount
 
     def applyTax(self, amount):
-        raise NotImplemented
+        return (amount) + (amount * self.taxRate)
     def isStudent(self, user_type):
         if (user_type == "student"):
             return True
