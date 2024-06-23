@@ -27,28 +27,27 @@ class Order:
     def getOrder(self):
         """Get user's order and quantity."""
         order = {}
-        while True:
-            choice = input("Enter the number of the item you want (or '6' to exit, '7' to clear): ").strip()
-            if choice == '6':
-                return None
-            elif choice == '7':
+        choice = input("Enter the number of the item you want (or '6' to exit, '7' to clear): ").strip()
+        if choice == '6':
+                return False
+        elif choice == '7':
                 for key, val in order.items():
                     order[key] = 0
-            elif not choice.isdigit() or int(choice) not in range(1, 7):
+        elif not choice.isdigit() or int(choice) not in range(1, 7):
                 print("Invalid input. Please enter a number between 1 and 5.")
-                continue
+                
+        else:
+            quantity = input(f"How many {self._priceDict[int(choice)][0]} do you want? ").strip()
+            if not quantity.isdigit() or int(quantity) < 1:
+                print("Invalid quantity. Please enter a positive integer.")
+                    
+            if int(choice) not in order:
+                order[int(choice)] = int(quantity)
             else:
-                quantity = input(f"How many {self._priceDict[int(choice)][0]} do you want? ").strip()
-                if not quantity.isdigit() or int(quantity) < 1:
-                    print("Invalid quantity. Please enter a positive integer.")
-                    continue
-                if int(choice) not in order:
-                    order[int(choice)] = int(quantity)
-                else:
-                    order[int(choice)] += int(quantity)
-                another = input("Do you want to order anything else? (yes/no): ").strip().lower()
-                if another != "yes":
-                    return order
+                order[int(choice)] += int(quantity)
+            another = input("Do you want to order anything else? (yes/no): ").strip().lower()
+            if another != "yes":
+                return order
 
     def calculatePrice(self, order):
         """Calculate the total price of the order."""
