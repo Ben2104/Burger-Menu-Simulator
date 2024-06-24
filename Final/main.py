@@ -13,8 +13,6 @@ if __name__=="__main__":
         if (curOrder == False):
             break
         curPrice = o.calculatePrice(curOrder)
-        student = Student()
-        staff = Staff()
         
         customer = Customer()
         user_type = input("Are you a student or a staff? ").strip().lower()
