@@ -1,5 +1,0 @@
-Bill:
-De Anza Burger: 2 x $5.25 = $10.50
-Total before tax: $10.50
-Tax amount: $0.94
-Total price after tax: $11.45
