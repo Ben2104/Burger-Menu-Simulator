@@ -30,7 +30,7 @@ class Order:
         while True:
             choice = input("Enter the number of the item you want (or '6' to exit, '7' to clear): ").strip()
             if choice == '6':
-                return None
+                return False
             elif choice == '7':
                 for key, val in order.items():
                     order[key] = 0
@@ -72,6 +72,7 @@ class Order:
     def saveToFile(self, bill):
         timeStamp = time.time()
         orderTimeStamp = datetime.datetime.fromtimestamp(timeStamp).strftime('%Y-%m-%d %H-%M-%S')
+        orderTimeStamp = orderTimeStamp + ".txt"
         with open(orderTimeStamp, 'w') as outFile:
             outFile.write(bill)
             
