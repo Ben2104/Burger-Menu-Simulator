@@ -7,8 +7,8 @@
   <li>Uzair Rao<a href ="https://github.com/uprisemetro">@uprisemetro</a> 
 </ul>
 
-# OVERALL
-De Anza College Burger Menu Simulator
+
+# De Anza College Burger Menu Simulator
 
 # Overview
 The De Anza College Burger Menu Simulator is an interactive console-based application that allows users to browse through a virtual menu, customize their burger orders, and receive an order summary. The program is designed to provide an engaging and user-friendly experience, replicating the process of ordering a burger at De Anza College's cafeteria.
