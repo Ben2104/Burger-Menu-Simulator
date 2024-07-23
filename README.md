@@ -11,9 +11,16 @@ De Anza College Burger Menu Simulator
 Overview
 The De Anza College Burger Menu Simulator is an interactive console-based application that allows users to browse through a virtual menu, customize their burger orders, and receive an order summary. The program is designed to provide an engaging and user-friendly experience, replicating the process of ordering a burger at De Anza College's cafeteria.
 
-Features
-Menu Display:
+# Features
+<ol>
+  <li>Menu Display:<li>
+  <ul>
+    <li>Displays a list of available burgers, sides, and beverages.</li>
+    <li>Each item includes a description and price.</li> 
 
+  </ul>
+</ol>
+Customization:
 Displays a list of available burgers, sides, and beverages.
 Each item includes a description and price.
 Customization:
