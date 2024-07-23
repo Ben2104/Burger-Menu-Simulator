@@ -13,25 +13,40 @@ The De Anza College Burger Menu Simulator is an interactive console-based applic
 
 # Features
 <ol>
-  <li>Menu Display:<li>
-  <ul>
-    <li>Displays a list of available burgers, sides, and beverages.</li>
-    <li>Each item includes a description and price.</li> 
+  <li>Menu Display:
+    <ul>
+      <li>Displays a list of available burgers, sides, and beverages.</li>
+      <li>Each item includes a description and price.</li> 
+    </ul>
+</li>
+    
+  <li>Customization:
+    <ul>
+      <li>Allows users to customize their burgers with various options such as type of bun, patty, toppings, and sauces.</li>
+      <li>Users can add or remove items from their order.</li>
+    </ul>
+  </li>
 
-  </ul>
+  <li>Order Summary:
+    <ul>
+      <li>Provides a detailed summary of the user's order, including individual item prices and the total cost.</li>
+      <li>Allows users to confirm or modify their order before finalizing it.</li>
+    </ul>
+  </li>
+  <li>Interactive Interface:
+    <ul>
+      <li>User-friendly prompts and menus guide users through the ordering process.</li>
+      <li>Error handling ensures users can correct mistakes without order restarting.</li>
+    </ul>
+  </li>
 </ol>
-Customization:
-Displays a list of available burgers, sides, and beverages.
-Each item includes a description and price.
-Customization:
 
-Allows users to customize their burgers with various options such as type of bun, patty, toppings, and sauces.
-Users can add or remove items from their order.
-Order Summary:
 
-Provides a detailed summary of the user's order, including individual item prices and the total cost.
-Allows users to confirm or modify their order before finalizing it.
-Interactive Interface:
 
-User-friendly prompts and menus guide users through the ordering process.
-Error handling ensures users can correct mistakes without restarting the order.
+
+
+
+
+
+
+
