@@ -1,5 +1,6 @@
 # FINAL PYTHON PROJECT
-![image](https://github.com/user-attachments/assets/9af0e453-3143-4008-9b9a-3acc590688d3)
+![image](https://github.com/user-attachments/assets/6bb65caa-3141-4165-91c2-ff5a92b942b2)
+
 # Team:
 <ul>
   <li>Hoang Khoi Do <a href="https://github.com/Ben2104">@Ben2104</a></li>
