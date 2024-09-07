@@ -43,7 +43,7 @@ The De Anza College Burger Menu Simulator is an interactive console-based applic
   </li>
 </ol>
 
-#TECHNOLOGIES 📝: 
+# TECHNOLOGIES 📝: 
 <ul>
   <li>Python 🐍</li>
 </ul>
