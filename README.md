@@ -1,11 +1,14 @@
 # FINAL PYTHON PROJECT
-
+![image](https://github.com/user-attachments/assets/9af0e453-3143-4008-9b9a-3acc590688d3)
+# Team:
 <ul>
   <li>Hoang Khoi Do <a href="https://github.com/Ben2104">@Ben2104</a></li>
   <li>Stanislav zapalikov <a href="https://github.com/stan-zapalikov">@stan-zapalikov</a>
   <li>Andrew Sy<a href ="https://github.com/xcoolxandrew">@xcoolxandrew</a>
   <li>Uzair Rao<a href ="https://github.com/uprisemetro">@uprisemetro</a> 
 </ul>
+
+
 
 
 # De Anza College Burger Menu Simulator
